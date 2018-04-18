@@ -1,0 +1,95 @@
+body {
+	/**
+ 	* Remove the elements for the screen size chosen
+ 	*/
+
+ 	.hidden-lg {
+ 		@media (max-width: 1200px) {
+ 			display: none;
+ 		}
+ 	}
+
+ 	.hidden-md {
+ 		@media (min-width: 1024px) and (max-width: 1199px) {
+ 			display: none;
+ 		}
+ 	}
+
+ 	.hidden-sm {
+ 		@media (min-width: 768px) and (max-width: 1023px) {
+ 			display: none;
+ 		}
+ 	}
+
+ 	.hidden-xs { 
+ 		@media (max-width: 767px) {
+ 			display: none;
+ 		}
+ 	}
+
+ 	/**
+ 	* Let the elements only for the screen size chosen
+ 	*/
+
+ 	.visible-xs {
+ 		@media (min-width: 768px) {
+ 			display: none;
+ 		}
+ 	}
+
+ 	.visible-sm {
+ 		display: none;
+
+ 		@media (min-width: 768px) {
+ 			display: block;
+ 		}
+
+ 		@media (min-width: 1024px) {
+ 			display: none;
+ 		}
+ 	}
+
+ 	.visible-md {
+ 		display: none;
+
+ 		@media (min-width: 1024px) {
+ 			display: block;
+ 		}
+
+ 		@media (min-width: 1200px) {
+ 			display: none;
+ 		}
+ 	}
+
+ 	.visible-lg {
+ 		display: none;
+
+ 		@media (min-width: 1200px) {
+ 			display: block;
+ 		}
+ 	}
+	
+	/**
+	* Put 4% margin-right
+	*/
+ 	.margin-4pc {
+		margin-right: 4%;
+ 	}
+
+ 	.text-center {
+ 		text-align: center;
+ 	}
+
+ 	.uppercase {
+ 		text-transform: uppercase;
+ 	}
+
+ 	h3 {
+ 		text-transform: uppercase;
+ 	}
+
+ 	.margin-zero {
+ 		margin: 0;
+ 	}
+ }
+

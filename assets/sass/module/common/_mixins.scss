@@ -1,0 +1,67 @@
+/*----------------------------------------------------------------
+# Fonts
+----------------------------------------------------------------*/
+
+@mixin main-font() {
+	font-family: 'Andika', sans-serif;
+}
+
+@mixin alt-font() {
+	font-family: 'Amatic SC', sans-serif;
+}
+
+/*----------------------------------------------------------------
+# Transitions
+----------------------------------------------------------------*/
+
+@mixin transition($prop, $time, $delay) {
+	-webkit-transition: $prop $time cubic-bezier(0.190, 1.000, 0.220, 1.000) $delay;
+	-o-transition: $prop $time cubic-bezier(0.190, 1.000, 0.220, 1.000) $delay;
+	-moz-transition: $prop $time cubic-bezier(0.190, 1.000, 0.220, 1.000) $delay;
+	transition: $prop $time cubic-bezier(0.190, 1.000, 0.220, 1.000) $delay;
+}
+
+/*----------------------------------------------------------------
+# Troncate
+----------------------------------------------------------------*/
+
+@mixin troncate() {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+/*----------------------------------------------------------------
+# List
+----------------------------------------------------------------*/
+
+@mixin unlist() {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+/*----------------------------------------------------------------
+# Absolute
+----------------------------------------------------------------*/
+
+@mixin abs($top, $right, $bottom, $left) {
+	position: absolute;
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
+}
+
+/*----------------------------------------------------------------
+# Font Size
+----------------------------------------------------------------*/
+
+@function calculateRem($px) {
+	$remSize: $px / 16px;
+	@return $remSize * 1rem;
+}
+
+@mixin fontsize($px) {
+	font-size: calculateRem($px)
+}
